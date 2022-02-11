@@ -1,30 +1,15 @@
 <script>
-  let x = 0;
-  let y = 0;
-  function perspective({ clientX, clientY }) {
-    window.requestAnimationFrame(() => {
-      let box = card.getBoundingClientRect();
-      x = -(clientY - box.y - box.height / 2) / 2000;
-      y = (clientX - box.x - box.width / 2) / 2000;
-    });
-  }
-  let card = null;
-
-  window.addEventListener('deviceorientation', handleOrientation, true);
-  function handleOrientation({ beta, gamma }) {
-    x = -beta / 100;
-    y = -gamma / 100;
-  }
+  import FollowMouse from './FollowMouse.svelte';
 </script>
 
 <div class="bg" />
-<div class="w-full h-full d-flex justify-content-center align-items-center" on:mousemove={perspective}>
-  <div class="welcome shadow-lg w-three-quarter h-three-quarter p-20" bind:this={card} style="transform: perspective(100px) rotateX({x}deg) rotateY({y}deg)">
+<FollowMouse class="w-full h-full d-flex justify-content-center align-items-center">
+  <div class="welcome shadow-lg w-three-quarter h-three-quarter p-20">
     <p>Hi, I'm</p>
     <h1>Cas</h1>
     <p>I bend browsers to my will.</p>
   </div>
-</div>
+</FollowMouse>
 
 <style>
   .welcome {
