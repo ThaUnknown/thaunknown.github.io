@@ -2,7 +2,7 @@
   import LookAt from 'svelte-lookat'
   import Splash from './Splash.svelte'
   const splash = [
-    'I bend browsers to my will',
+    "I make browsers do what they aren't meant to",
     'I write high-performance JS',
     'I know P2P',
     'I work with data streaming',
@@ -17,12 +17,13 @@
     'I create cutting edge webapps',
     'I utilise hardware acceleration',
     'I know what the user wants',
-    'I prefer simplicity'
+    'I prefer simplicity',
+    'I make webapps look native'
   ]
 </script>
 
-<div class="bg" />
-<LookAt class="w-full h-full d-flex justify-content-center align-items-center">
+<div class="bg bg-very-dark" />
+<LookAt class="w-full h-full d-flex justify-content-center align-items-center" intensity="5">
   <div class="welcome shadow-lg w-three-quarter h-three-quarter p-20">
     <div class="p-20 m-20">
       <h4 class="px-20 my-0 font-weight-bold">Hi, I'm</h4>
@@ -50,7 +51,7 @@
     }
   }
   h1 {
-    font-size: 8rem !important
+    font-size: 8rem !important;
   }
   .bg {
     position: absolute;
