@@ -96,11 +96,16 @@
     <div class="col-md-4">
       <h1 class="font-weight-bold">Contact</h1>
     </div>
+    <!-- svelte-ignore missing-declaration -->
     <div class="col-8 font-size-16">
       <b>Email:</b>
       {decodeURIComponent(atob('Y2FzaXN0YWtlbiU0MGdtYWlsLmNvbQ=='))}<br />
       <b>GitHub:</b> <a href="https://github.com/ThaUnknown/">https://github.com/ThaUnknown</a>
     </div>
+  </div>
+  <hr class="my-20" />
+  <div class="t text-center">
+    ThaUnknown_ © 2021 - {new Date().getFullYear()}
   </div>
 </div>
 

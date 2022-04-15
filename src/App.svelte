@@ -7,7 +7,7 @@
   <div class="content-wrapper overflow-x-hidden">
     <LandingCard />
     <div class="d-flex w-full bg-dark-light">
-      <div class="container my-20 py-20">
+      <div class="container mt-20 pt-20">
         <Content />
       </div>
     </div>
