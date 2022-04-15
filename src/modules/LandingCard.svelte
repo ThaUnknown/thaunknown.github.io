@@ -1,5 +1,5 @@
 <script>
-  import LookAt from './LookAt.svelte'
+  import LookAt from 'svelte-lookat'
   import Splash from './Splash.svelte'
   const splash = [
     'I bend browsers to my will',
