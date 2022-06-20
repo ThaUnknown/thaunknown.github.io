@@ -12,6 +12,7 @@
     Electron: 'electron',
     Chromium: 'chromium',
     // technologies
+    Emscripten: 'ems',
     WebRTC: 'webrtc',
     Canvas: 'canvas',
     Matroska: 'mkv',
