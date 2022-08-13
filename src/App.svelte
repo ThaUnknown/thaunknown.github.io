@@ -1,13 +1,13 @@
 <script>
-  import LandingCard from './modules/LandingCard.svelte'
-  import Content from './modules/Content.svelte'
+import LandingCard from './modules/LandingCard.svelte'
+import Content from './modules/Content.svelte'
 </script>
 
-<div class="page-wrapper">
-  <div class="content-wrapper overflow-x-hidden">
+<div class='page-wrapper'>
+  <div class='content-wrapper overflow-x-hidden'>
     <LandingCard />
-    <div class="d-flex w-full bg-dark-light">
-      <div class="container mt-20 pt-20">
+    <div class='d-flex w-full bg-dark-light'>
+      <div class='container mt-20 pt-20'>
         <Content />
       </div>
     </div>

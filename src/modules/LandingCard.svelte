@@ -1,34 +1,34 @@
 <script>
-  import LookAt from 'svelte-lookat'
-  import Splash from './Splash.svelte'
-  const splash = [
-    "I make browsers do what they aren't meant to",
-    'I write high-performance JS',
-    'I know P2P',
-    'I work with data streaming',
-    'I work with big data',
-    'I can use bitwise operators',
-    'I write regex from memory',
-    'I create the impossible',
-    'I envy knowledge',
-    'I never stop learning',
-    'I can optimise JS',
-    "I support experimental API's",
-    'I create cutting edge webapps',
-    'I utilise hardware acceleration',
-    'I know what the user wants',
-    'I prefer simplicity',
-    'I make webapps look native'
-  ]
+import LookAt from 'svelte-lookat'
+import Splash from './Splash.svelte'
+const splash = [
+  "I make browsers do what they aren't meant to",
+  'I write high-performance JS',
+  'I know P2P',
+  'I work with data streaming',
+  'I work with big data',
+  'I can use bitwise operators',
+  'I write regex from memory',
+  'I create the impossible',
+  'I envy knowledge',
+  'I never stop learning',
+  'I can optimise JS',
+  "I support experimental API's",
+  'I create cutting edge webapps',
+  'I utilise hardware acceleration',
+  'I know what the user wants',
+  'I prefer simplicity',
+  'I make webapps look native'
+]
 </script>
 
-<div class="bg bg-very-dark" />
-<LookAt class="w-full h-full d-flex justify-content-center align-items-center" intensity="5">
-  <div class="welcome shadow-lg w-three-quarter h-three-quarter p-20">
-    <div class="p-20 m-20">
-      <h4 class="px-20 my-0 font-weight-bold">Hi, I'm</h4>
-      <h1 class="px-20 my-0 font-weight-bold">Cas</h1>
-      <Splash {splash} class="p-20 font-weight-bold font-size-24" />
+<div class='bg bg-very-dark' />
+<LookAt class='w-full h-full d-flex justify-content-center align-items-center' intensity='5'>
+  <div class='welcome shadow-lg w-three-quarter h-three-quarter p-20'>
+    <div class='p-20 m-20'>
+      <h4 class='px-20 my-0 font-weight-bold'>Hi, I'm</h4>
+      <h1 class='px-20 my-0 font-weight-bold'>Cas</h1>
+      <Splash {splash} class='p-20 font-weight-bold font-size-24' />
     </div>
   </div>
 </LookAt>

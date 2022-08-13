@@ -1,13 +1,13 @@
 <script>
-  import { fly } from 'svelte/transition'
-  export let splash = ['Now with extra cookies!']
-  function getRand() {
-    return splash[Math.floor(Math.random() * splash.length)]
-  }
-  let current = getRand()
-  setInterval(() => {
-    current = getRand()
-  }, 2000)
+import { fly } from 'svelte/transition'
+export let splash = ['Now with extra cookies!']
+function getRand () {
+  return splash[Math.floor(Math.random() * splash.length)]
+}
+let current = getRand()
+setInterval(() => {
+  current = getRand()
+}, 2000)
 </script>
 
 {#key current}
