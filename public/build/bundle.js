@@ -54,6 +54,9 @@ var app = (function () {
     function children(element) {
         return Array.from(element.childNodes);
     }
+    function toggle_class(element, name, toggle) {
+        element.classList[toggle ? 'add' : 'remove'](name);
+    }
     function custom_event(type, detail, { bubbles = false, cancelable = false } = {}) {
         const e = document.createEvent('CustomEvent');
         e.initCustomEvent(type, bubbles, cancelable, detail);
@@ -356,26 +359,41 @@ var app = (function () {
     const file$1 = "src\\modules\\Loader.svelte";
 
     function create_fragment$1(ctx) {
-    	let div;
+    	let div1;
+    	let div0;
 
     	const block = {
     		c: function create() {
-    			div = element("div");
-    			div.textContent = "Epilepsy Warning";
-    			attr_dev(div, "class", "w-full h-full d-flex align-items-center justify-content-center text font-weight-bold z-100 svelte-6o0t5k");
-    			add_location(div, file$1, 0, 0, 0);
+    			div1 = element("div");
+    			div0 = element("div");
+    			div0.textContent = "Epilepsy Warning";
+    			attr_dev(div0, "class", "h-full text d-flex align-items-center justify-content-center anim svelte-ybbszf");
+    			toggle_class(div0, "transition", /*transition*/ ctx[0]);
+    			add_location(div0, file$1, 11, 2, 218);
+    			attr_dev(div1, "class", "w-full h-full con font-weight-bold z-100 overflow-hidden svelte-ybbszf");
+    			toggle_class(div1, "hide", /*hide*/ ctx[1]);
+    			add_location(div1, file$1, 10, 0, 133);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
     		},
-    		p: noop,
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*transition*/ 1) {
+    				toggle_class(div0, "transition", /*transition*/ ctx[0]);
+    			}
+
+    			if (dirty & /*hide*/ 2) {
+    				toggle_class(div1, "hide", /*hide*/ ctx[1]);
+    			}
+    		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(div1);
     		}
     	};
 
@@ -390,16 +408,38 @@ var app = (function () {
     	return block;
     }
 
-    function instance$1($$self, $$props) {
+    function instance$1($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Loader', slots, []);
+    	let transition = false;
+    	let hide = false;
+
+    	setTimeout(
+    		() => {
+    			$$invalidate(1, hide = true);
+    			$$invalidate(0, transition = true);
+    		},
+    		5000
+    	);
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Loader> was created with unknown prop '${key}'`);
     	});
 
-    	return [];
+    	$$self.$capture_state = () => ({ transition, hide });
+
+    	$$self.$inject_state = $$props => {
+    		if ('transition' in $$props) $$invalidate(0, transition = $$props.transition);
+    		if ('hide' in $$props) $$invalidate(1, hide = $$props.hide);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [transition, hide];
     }
 
     class Loader extends SvelteComponentDev {
@@ -434,8 +474,8 @@ var app = (function () {
     			t = space();
     			div0 = element("div");
     			attr_dev(div0, "class", "content-wrapper overflow-x-hidden");
-    			add_location(div0, file, 8, 2, 208);
-    			attr_dev(div1, "class", "page-wrapper bg-danger");
+    			add_location(div0, file, 8, 2, 198);
+    			attr_dev(div1, "class", "page-wrapper");
     			add_location(div1, file, 5, 0, 133);
     		},
     		l: function claim(nodes) {
@@ -503,7 +543,7 @@ var app = (function () {
     }
 
     const app = new App({
-    	target: document.body
+      target: document.body
     });
 
     return app;

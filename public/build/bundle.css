@@ -1,6 +1,6 @@
-.text.svelte-6o0t5k{font-size:10rem;color:transparent;background:linear-gradient( 90deg, #000  50%, #fff 0),
-      linear-gradient( 90deg, #fff 50%, #000 0);background-repeat:no-repeat;background-size:200% 100%;background-position:top left;-webkit-background-clip:text, padding-box;background-clip:text, padding-box;transition:0.8s
-  }.text.svelte-6o0t5k:hover{background-position:top right}/*
+@keyframes svelte-ybbszf-background{from{background-position:top right}to{background-position:top left}}@keyframes svelte-ybbszf-un-background{from{background-position:top left}to{background-position:top right}}.con.svelte-ybbszf{transition:1s ease
+  }.text.svelte-ybbszf{width:100vw;text-align:center;white-space:nowrap;font-size:10rem;color:transparent;background:linear-gradient( 90deg, #000  50%, #fff 0),
+      linear-gradient( 90deg, #fff 50%, #000 0);background-repeat:no-repeat;background-size:200% 100%;background-position:top right;-webkit-background-clip:text, padding-box;background-clip:text, padding-box;animation:.8s svelte-ybbszf-background ease forwards}.text.transition.svelte-ybbszf{animation:.8s svelte-ybbszf-un-background ease forwards}.hide.svelte-ybbszf{width:0 !important}/*
 -------------------------------------------------------------------------------
 Quartermoon CSS (Variables file)
 Version: Dev
