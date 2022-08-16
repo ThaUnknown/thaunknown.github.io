@@ -19,6 +19,7 @@
     "svelte": "^3.46.2"
   },
   "dependencies": {
+    "quartermoon": "^1.2.1",
     "svelte-lookat": "^1.0.1"
   }
 }

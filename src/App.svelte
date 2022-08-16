@@ -1,28 +1,15 @@
-<script>
-import LandingCard from './modules/LandingCard.svelte'
-import Content from './modules/Content.svelte'
+<script context='module'>
+import 'quartermoon/css/quartermoon-variables.css'
+import Loader from './modules/Loader.svelte'
 </script>
 
-<div class='page-wrapper'>
+<div class='page-wrapper bg-danger'>
+  <!-- Transitions -->
+  <Loader />
   <div class='content-wrapper overflow-x-hidden'>
-    <LandingCard />
-    <div class='d-flex w-full bg-dark-light'>
-      <div class='container mt-20 pt-20'>
-        <Content />
-      </div>
-    </div>
+    <!-- Router -->
   </div>
 </div>
 
 <style>
-  .content-wrapper {
-    perspective: 1px;
-    transform-style: preserve-3d;
-  }
-  :global(::-webkit-scrollbar) {
-    display: none;
-  }
-  :global(.pointer) {
-    cursor: pointer;
-  }
 </style>
