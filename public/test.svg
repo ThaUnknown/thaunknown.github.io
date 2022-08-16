@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <path id="curve" fill="none" d="M0,12c32.5,0,32.5,12,65,12s32.5-12,65-12V0C97.5,0,92.9,12,65,12C32.5,12,20.7,0,0,0"/>
+  <text font-family="Roboto">
+    <textPath href="#curve">
+      Epilepsy Warning
+    </textPath>
+  </text>
+</svg>

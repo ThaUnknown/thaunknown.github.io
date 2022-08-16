@@ -367,10 +367,10 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			div0.textContent = "Epilepsy Warning";
-    			attr_dev(div0, "class", "h-full text d-flex align-items-center justify-content-center anim svelte-ybbszf");
+    			attr_dev(div0, "class", "h-full text d-flex align-items-center justify-content-center anim svelte-4zq9so");
     			toggle_class(div0, "transition", /*transition*/ ctx[0]);
     			add_location(div0, file$1, 11, 2, 218);
-    			attr_dev(div1, "class", "w-full h-full con font-weight-bold z-100 overflow-hidden svelte-ybbszf");
+    			attr_dev(div1, "class", "w-full h-full con font-weight-bold z-100 overflow-hidden svelte-4zq9so");
     			toggle_class(div1, "hide", /*hide*/ ctx[1]);
     			add_location(div1, file$1, 10, 0, 133);
     		},
@@ -419,7 +419,7 @@ var app = (function () {
     			$$invalidate(1, hide = true);
     			$$invalidate(0, transition = true);
     		},
-    		5000
+    		2000
     	);
 
     	const writable_props = [];
