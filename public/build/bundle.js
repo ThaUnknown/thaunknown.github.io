@@ -419,12 +419,12 @@ var app = (function () {
     			attr_dev(text_1, "font-weight", "700");
     			attr_dev(text_1, "stroke-width", "1px");
     			add_location(text_1, file$1, 25, 6, 649);
-    			attr_dev(svg_1, "class", svg_1_class_value = "w-full h-full " + (/*svg*/ ctx[1] ? 'd-flex' : 'd-none') + " svelte-x93a5i");
+    			attr_dev(svg_1, "class", svg_1_class_value = "w-full h-full " + (/*svg*/ ctx[1] ? 'd-flex' : 'd-none') + " svelte-bynw6j");
     			add_location(svg_1, file$1, 24, 4, 586);
-    			attr_dev(div1, "class", "h-full text d-flex align-items-center justify-content-center text-nowrap svelte-x93a5i");
+    			attr_dev(div1, "class", "h-full text d-flex align-items-center justify-content-center text-nowrap svelte-bynw6j");
     			toggle_class(div1, "transition", /*hide*/ ctx[0]);
     			add_location(div1, file$1, 22, 2, 403);
-    			attr_dev(div2, "class", "w-full h-full con font-weight-bold z-100 overflow-hidden svelte-x93a5i");
+    			attr_dev(div2, "class", "w-full h-full con font-weight-bold z-100 overflow-hidden svelte-bynw6j");
     			toggle_class(div2, "hide", /*hide*/ ctx[0]);
     			add_location(div2, file$1, 21, 0, 318);
     		},
@@ -451,7 +451,7 @@ var app = (function () {
     				attr_dev(div0, "class", div0_class_value);
     			}
 
-    			if (dirty & /*svg*/ 2 && svg_1_class_value !== (svg_1_class_value = "w-full h-full " + (/*svg*/ ctx[1] ? 'd-flex' : 'd-none') + " svelte-x93a5i")) {
+    			if (dirty & /*svg*/ 2 && svg_1_class_value !== (svg_1_class_value = "w-full h-full " + (/*svg*/ ctx[1] ? 'd-flex' : 'd-none') + " svelte-bynw6j")) {
     				attr_dev(svg_1, "class", svg_1_class_value);
     			}
 

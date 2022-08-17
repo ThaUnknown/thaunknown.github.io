@@ -41,6 +41,7 @@ onMount(() => {
   }
   @keyframes stroke {
     0%   {
+      transform: scale(1);
       stroke: #fff;
       fill: #000;
     }
@@ -71,14 +72,17 @@ onMount(() => {
       stroke: #fff;
     }
     80%  {
+      transform: scale(1.2);
       fill: #000;
       stroke: #fff;
     }
     81%  {
+      transform: scale(1.1);
       fill: #fff;
       stroke: #000;
     }
     100% {
+      transform: scale(1);
       background: none;
       fill: #fff;
       stroke: #000;
