@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "quartermoon": "^1.2.1",
-    "svelte-lookat": "^1.0.1"
+    "three": "0.121.0",
+    "vanta": "^0.5.22"
   }
 }

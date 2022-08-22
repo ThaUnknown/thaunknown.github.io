@@ -1,30 +1,30 @@
 <script>
-import { onMount } from 'svelte'
+  import { onMount } from 'svelte'
 
-let hide = false
-let svg = false
+  let hide = false
+  let svg = false
 
-function hideLoader () {
-  setTimeout(() => {
-    svg = false
-    hide = true
-  }, 2000)
-}
-onMount(() => {
-  setTimeout(() => {
-    svg = true
-  }, 1000)
-})
+  function hideLoader () {
+    setTimeout(() => {
+      svg = false
+      hide = true
+    }, 1500)
+  }
+  onMount(() => {
+    setTimeout(() => {
+      svg = true
+    }, 1000)
+  })
 </script>
 
 <svelte:window on:DOMContentLoaded={hideLoader} />
 
-<div class='w-full h-full con font-weight-bold z-100 overflow-hidden' class:hide>
+<div class='w-full h-full con font-weight-bold overflow-hidden position-absolute' class:hide>
   <div class='h-full text d-flex align-items-center justify-content-center text-nowrap' class:transition={hide}>
-    <div class={svg ? 'd-none' : 'd-flex'}>Epilepsy Warning</div>
+    <div class={svg ? 'd-none' : 'd-flex'}>Loading....</div>
     <svg class='w-full h-full {svg ? 'd-flex' : 'd-none'}'>
       <text x='50%' y='50%' dy='4.15rem' text-anchor='middle' font-size='10rem' font-weight='700' stroke-width='1px'>
-        Epilepsy Warning
+        Loading....
       </text>
     </svg>
   </div>
@@ -95,6 +95,7 @@ onMount(() => {
   }
   .con {
     transition: width 1s ease;
+    z-index: 100;
   }
   svg {
     font-size: 10rem;
