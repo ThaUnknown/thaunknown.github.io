@@ -1,9 +1,11 @@
 <script context='module'>
   import Home from './Home.svelte'
+  import Showcase from './Showcase.svelte'
   import Footer from './Footer.svelte'
 
   const pages = {
-    home: Home
+    home: Home,
+    showcase: Showcase
   }
 </script>
 <script>

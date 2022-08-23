@@ -5,8 +5,9 @@
   let animate = false
   let root = null
   export let page = 'home'
-  transition = target => {
+  transition = async target => {
     animate = false
+    await Promise.resolve()
     // eslint-disable-next-line no-unused-vars
     const noop = root.offsetHeight // force trigger DOM reflow to restart animation
     animate = target

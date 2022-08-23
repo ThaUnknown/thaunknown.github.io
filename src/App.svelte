@@ -1,8 +1,11 @@
 <script context='module'>
+  import './global.css'
   import 'quartermoon/css/quartermoon-variables.css'
   import Loader from './modules/Loader.svelte'
   import Transitions from './modules/Transitions.svelte'
   import Router from './modules/Router.svelte'
+  import Navbar from './modules/Navbar.svelte'
+
 </script>
 
 <script>
@@ -13,22 +16,14 @@
   <Transitions bind:page />
   <Loader />
   <div class='content-wrapper h-full overflow-y-scroll'>
+    <Navbar {page} />
     <Router {page} />
   </div>
 </div>
 
 <style>
-  :global(.pointer) {
-    cursor: pointer;
-  }
   * {
     scroll-behavior: smooth;
-  }
-  :root {
-    --dark-color-dim: #000 !important;
-  }
-  :global(::-webkit-scrollbar) {
-    display: none;
   }
   .content-wrapper {
     perspective: 400px;

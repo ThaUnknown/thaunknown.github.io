@@ -36,11 +36,11 @@
   let test
 </script>
 <script>
-  import * as THREE from 'three'
-  import net from 'vanta/dist/vanta.net.min.js'
   let instance = null
-  onMount(() => {
-    instance = net({
+  onMount(async () => {
+    const THREE = await import('three')
+    const net = await import('vanta/src/vanta.net.js')
+    instance = net.default({
       el: test,
       mouseControls: true,
       touchControls: true,
@@ -60,7 +60,7 @@
 </script>
 <section class='h-full d-flex flex-column justify-content-between hero' bind:this={test}>
   <div />
-  <div class='container'>
+  <div class='container content'>
     <div class='font-weight-bold hero-title text-white'>I'm Cas.</div>
     <div class='font-size-24 mb-20'>Software Developer. Web-Dev Enthusiast.</div>
     <button class='btn btn-lg btn-transparent border' type='button' on:click={() => { transition('showcase') }}>Showcase</button>
@@ -70,19 +70,21 @@
   <a on:click={scrollAbout} class='w-full d-flex justify-content-center py-20 pointer'><div class='about mb-20' /></a>
 </section>
 <section class='container font-size-16 mb-20' bind:this={about}>
-  <p>
-    Hi, I'm <b>Cas</b>, but online I go as <b>ThaUnknown_</b>, as I don't reveal much information about myself and
-    <b>take privacy <span class='font-size-12 font-weight-normal'>relatively</span> seriously.</b>
-  </p>
-  <p>
-    I'm a <b>self-taught</b> developer based in Europe. I specialize in <b>frontend</b> development, handling and <b>streaming</b> large amounts of data, and any new shiny
-    <b>experimental API</b>.
-  </p>
-  <p>I always put <b>simplicity and performance</b> first, to ensure my apps are snappy and lightweight.</p>
-  <p class='pt-20'>
-    <button class='btn btn-lg btn-transparent border' type='button' on:click={() => { transition('showcase') }}>Showcase</button>
-    <button class='btn btn-lg btn-transparent border ml-10' type='button' on:click={() => { transition('Projects') }}>Projects</button>
-  </p>
+  <div class='content'>
+    <p>
+      Hi, I'm <b>Cas</b>, but online I go as <b>ThaUnknown_</b>, as I don't reveal much information about myself and
+      <b>take privacy <span class='font-size-12 font-weight-normal'>relatively</span> seriously.</b>
+    </p>
+    <p>
+      I'm a <b>self-taught</b> developer based in Europe. I specialize in <b>frontend</b> development, handling and <b>streaming</b> large amounts of data, and any new shiny
+      <b>experimental API</b>.
+    </p>
+    <p>I always put <b>simplicity and performance</b> first, to ensure my apps are snappy and lightweight.</p>
+    <p class='pt-20'>
+      <button class='btn btn-lg btn-transparent border' type='button' on:click={() => { transition('showcase') }}>Showcase</button>
+      <button class='btn btn-lg btn-transparent border ml-10' type='button' on:click={() => { transition('Projects') }}>Projects</button>
+    </p>
+  </div>
 </section>
 <!-- <section class='container pt-20'>
   <h1 class='font-weight-bold'>Technologies I've used and am familiar with.</h1>

@@ -1,0 +1,9 @@
+.pointer {
+  cursor: pointer;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+:root {
+  --dark-color-dim: #000 !important;
+}
