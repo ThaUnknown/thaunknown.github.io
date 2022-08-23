@@ -8,7 +8,7 @@
     setTimeout(() => {
       svg = false
       hide = true
-    }, 1500)
+    }, 2000)
   }
   onMount(() => {
     setTimeout(() => {

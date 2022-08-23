@@ -6,4 +6,12 @@
 }
 :root {
   --dark-color-dim: #000 !important;
+  --dm-button-primary-bg-color: #7f47dd !important;
+  --dm-button-primary-bg-color-hover: #5337a0 !important;
+  --dm-link-text-color: #5337a0 !important;
+  --dm-link-text-color-hover: #7f47dd !important;
+  --dm-navbar-link-active-text-color: #7f47dd !important;
+  --dm-navbar-link-active-text-color-hover: #5337a0 !important;
+  --dm-navbar-link-text-color-hover: #7f47dd !important;
+  --primary-color: #7f47dd !important;
 }

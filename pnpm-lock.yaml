@@ -5,7 +5,7 @@ specifiers:
   '@rollup/plugin-commonjs': ^17.1.0
   '@rollup/plugin-node-resolve': ^11.2.1
   postcss: ^8.4.16
-  quartermoon: ^1.2.1
+  quartermoon: 1.2.3
   rollup: ^2.67.1
   rollup-plugin-css-only: ^3.1.0
   rollup-plugin-livereload: ^2.0.5
@@ -19,7 +19,7 @@ specifiers:
   vanta: ^0.5.22
 
 dependencies:
-  quartermoon: 1.2.1
+  quartermoon: 1.2.3
   svelte: 3.49.0
   three: 0.121.0
   vanta: 0.5.22
@@ -1287,8 +1287,8 @@ packages:
       postcss-selector-parser: 6.0.10
     dev: true
 
-  /quartermoon/1.2.1:
-    resolution: {integrity: sha512-xD/AI6Rd7SrIMFKJzfOlq7fkMlQE1C71Pmpkp/QlnHw1YeFvo8/9SL8CpJLYLSXCS4vktGQdg9v8zP6wFBVJ9g==}
+  /quartermoon/1.2.3:
+    resolution: {integrity: sha512-EYfaHqvBB1jN/7qzHEgabSC94d1sRaR4kfmDMjwNKA6XEHaGp0SlV6lSv12l9FzSSSZq9grqPvHbVIkQEzFerg==}
     dev: false
 
   /randombytes/2.1.0:

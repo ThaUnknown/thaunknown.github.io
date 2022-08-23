@@ -6,7 +6,16 @@
 }
 :root {
   --dark-color-dim: #000 !important;
-}/*
+  --dm-button-primary-bg-color: #7f47dd !important;
+  --dm-button-primary-bg-color-hover: #5337a0 !important;
+  --dm-link-text-color: #5337a0 !important;
+  --dm-link-text-color-hover: #7f47dd !important;
+  --dm-navbar-link-active-text-color: #7f47dd !important;
+  --dm-navbar-link-active-text-color-hover: #5337a0 !important;
+  --dm-navbar-link-text-color-hover: #7f47dd !important;
+  --primary-color: #7f47dd !important;
+}
+/*
 -------------------------------------------------------------------------------
 Quartermoon CSS (Variables file)
 Version: Dev
@@ -10944,6 +10953,9 @@ a.badge-group.focus-visible {
     max-width: 100%;
     height: auto;
 }
+.img-cover {
+    object-fit: cover;
+}
 
 
 /*
@@ -12973,6 +12985,9 @@ Notes:
 .d-inline-flex {
     display: inline-flex !important;
 }
+.d-grid {
+    display: grid !important
+}
 @media (min-width: 577px) {
     .d-sm-none {
         display: none !important;
@@ -13000,6 +13015,9 @@ Notes:
     }
     .d-sm-inline-flex {
         display: inline-flex !important;
+    }
+    .d-sm-grid {
+        display: grid !important
     }
 }
 @media (min-width: 769px) {
@@ -13030,6 +13048,9 @@ Notes:
     .d-md-inline-flex {
         display: inline-flex !important;
     }
+    .d-md-grid {
+        display: grid !important
+    }
 }
 @media (min-width: 993px) {
     .d-lg-none {
@@ -13059,6 +13080,9 @@ Notes:
     .d-lg-inline-flex {
         display: inline-flex !important;
     }
+    .d-lg-grid {
+        display: grid !important
+    }
 }
 @media (min-width: 1201px) {
     .d-xl-none {
@@ -13087,6 +13111,9 @@ Notes:
     }
     .d-xl-inline-flex {
         display: inline-flex !important;
+    }
+    .d-xl-grid {
+        display: grid !important
     }
 }
 @media (max-width: 576px) {

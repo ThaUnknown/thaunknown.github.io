@@ -33,15 +33,16 @@
   function scrollAbout () {
     about.scrollIntoView({ behavior: 'smooth' })
   }
-  let test
+  let hero
+
+  const THREE = import('three')
+  const net = import('vanta/src/vanta.net.js')
 </script>
 <script>
   let instance = null
   onMount(async () => {
-    const THREE = await import('three')
-    const net = await import('vanta/src/vanta.net.js')
-    instance = net.default({
-      el: test,
+    instance = (await net).default({
+      el: hero,
       mouseControls: true,
       touchControls: true,
       gyroControls: true,
@@ -49,16 +50,16 @@
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00,
-      color: 0xffffff,
+      color: 0x7f47dd,
       backgroundColor: 0x0,
-      THREE
+      THREE: await THREE
     })
   })
   onDestroy(() => {
     instance?.destroy()
   })
 </script>
-<section class='h-full d-flex flex-column justify-content-between hero' bind:this={test}>
+<section class='h-full d-flex flex-column justify-content-between hero' bind:this={hero}>
   <div />
   <div class='container content'>
     <div class='font-weight-bold hero-title text-white'>I'm Cas.</div>
@@ -82,7 +83,7 @@
     <p>I always put <b>simplicity and performance</b> first, to ensure my apps are snappy and lightweight.</p>
     <p class='pt-20'>
       <button class='btn btn-lg btn-transparent border' type='button' on:click={() => { transition('showcase') }}>Showcase</button>
-      <button class='btn btn-lg btn-transparent border ml-10' type='button' on:click={() => { transition('Projects') }}>Projects</button>
+      <button class='btn btn-primary btn-lg btn-transparent border ml-10' type='button' on:click={() => { transition('Projects') }}>Projects</button>
     </p>
   </div>
 </section>

@@ -9,7 +9,9 @@
 </script>
 
 <script>
-  let page = 'home'
+  let page = location.hash.replace('#', '') || 'home'
+
+  $: location.hash = page
 </script>
 
 <div class='page-wrapper bg-very-dark'>

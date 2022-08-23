@@ -22,7 +22,7 @@
     "svelte-preprocess": "^4.10.7"
   },
   "dependencies": {
-    "quartermoon": "^1.2.1",
+    "quartermoon": "1.2.3",
     "svelte": "^3.49.0",
     "three": "0.121.0",
     "vanta": "^0.5.22"
