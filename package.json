@@ -24,6 +24,7 @@
   "dependencies": {
     "quartermoon": "1.2.3",
     "svelte": "^3.49.0",
+    "svelte-markdown": "^0.2.3",
     "three": "0.121.0",
     "vanta": "^0.5.22"
   }

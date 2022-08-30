@@ -14,6 +14,7 @@ specifiers:
   rollup-plugin-terser: ^7.0.0
   sirv-cli: ^2.0.2
   svelte: ^3.49.0
+  svelte-markdown: ^0.2.3
   svelte-preprocess: ^4.10.7
   three: 0.121.0
   vanta: ^0.5.22
@@ -21,6 +22,7 @@ specifiers:
 dependencies:
   quartermoon: 1.2.3
   svelte: 3.49.0
+  svelte-markdown: 0.2.3_svelte@3.49.0
   three: 0.121.0
   vanta: 0.5.22
 
@@ -174,6 +176,10 @@ packages:
   /@types/estree/1.0.0:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: true
+
+  /@types/marked/4.0.6:
+    resolution: {integrity: sha512-ITAVUzsnVbhy5afxhs4PPPbrv2hKVEDH5BhhaQNQlVG0UNu+9A18XSdYr53nBdHZ0ADEQLl+ciOjXbs7eHdiQQ==}
+    dev: false
 
   /@types/node/18.7.11:
     resolution: {integrity: sha512-KZhFpSLlmK/sdocfSAjqPETTMd0ug6HIMIAwkwUpU79olnZdQtMxpQP+G1wDzCH7na+FltSIhbaZuKdwZ8RDrw==}
@@ -775,6 +781,12 @@ packages:
     dependencies:
       sourcemap-codec: 1.4.8
     dev: true
+
+  /marked/4.0.19:
+    resolution: {integrity: sha512-rgQF/OxOiLcvgUAj1Q1tAf4Bgxn5h5JZTp04Fx4XUkVhs7B+7YA9JEWJhJpoO8eJt8MkZMwqLCNeNqj1bCREZQ==}
+    engines: {node: '>= 12'}
+    hasBin: true
+    dev: false
 
   /mdn-data/2.0.14:
     resolution: {integrity: sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==}
@@ -1551,6 +1563,16 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
     dev: true
+
+  /svelte-markdown/0.2.3_svelte@3.49.0:
+    resolution: {integrity: sha512-2h680NzTXnAD0CXhxe3GeHl6W+ayG4iKQRl+BIDRw+R0mUE0OiNxP1Vt8Rn+aWevB/LBiBIPCAwvL+0BkG057A==}
+    peerDependencies:
+      svelte: ^3.0.0
+    dependencies:
+      '@types/marked': 4.0.6
+      marked: 4.0.19
+      svelte: 3.49.0
+    dev: false
 
   /svelte-preprocess/4.10.7_vylzxgme5yisu3bsyvcau4hjtq:
     resolution: {integrity: sha512-sNPBnqYD6FnmdBrUmBCaqS00RyCsCpj2BG58A1JBswNF7b0OKviwxqVrOL/CKyJrLSClrSeqQv5BXNg2RUbPOw==}

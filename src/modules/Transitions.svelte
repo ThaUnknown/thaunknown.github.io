@@ -2,10 +2,12 @@
   export let transition = () => {}
 </script>
 <script>
+  export let container = null
   let animate = false
   let root = null
   export let page = 'home'
   transition = async target => {
+    if (container) container.scrollTop = 0
     animate = false
     await Promise.resolve()
     // eslint-disable-next-line no-unused-vars

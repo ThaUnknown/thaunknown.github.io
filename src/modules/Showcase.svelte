@@ -5,26 +5,29 @@
       title: 'Miru',
       description: 'A simple to use, anime torrent streaming app. Allows you to watch any anime, real-time with no waiting for downloads, with friends, while synching all your progress with you anime list for free with no ads or limits.',
       image: 'https://raw.githubusercontent.com/ThaUnknown/miru/HEAD/docs/show.gif',
-      tech: ['Svelte', 'Electron', 'Vite', 'GraphQL', 'WASM', 'Node.js', 'BitTorrent', 'WebRTC']
+      tech: ['Svelte', 'Electron', 'Vite', 'GraphQL', 'WASM', 'Node.js', 'BitTorrent', 'WebRTC'],
+      id: 'pwa-haven'
     },
     {
       title: 'PWA Haven',
       description: 'Progressive Web Apps which replace oversized native apps, with simple, lightweight browser based apps, which don\'t create copies of processes, but instead share one environment, which likely was already in-use by the user, for example browsing the web or reading articles, eliminating those duplicate processes.',
       image: 'https://raw.githubusercontent.com/ThaUnknown/pwa-haven/HEAD/docs/haven.png',
-      tech: ['Svelte', 'Webpack', 'Rollup', 'WASM', 'PWA', 'WebRTC']
+      tech: ['Svelte', 'Webpack', 'Rollup', 'WASM', 'PWA', 'WebRTC'],
+      id: 'pwa-haven'
     },
     {
       title: 'Portfolio',
       description: 'Fully hardware accelerated portfolio, with fancy transitions and animations that don\'t use and hacky patches, styles or other shenanigans which slows down rendering.',
       image: './public/images/portfolio.webp',
-      tech: ['Svelte', 'Rollup', 'WASM', 'three.js']
+      tech: ['Svelte', 'Rollup', 'WASM', 'three.js'],
+      id: 'thaunknown.github.io'
     }
   ]
 </script>
 
 <div class='container'>
   <div class='content'>
-    {#each projects as { title, description, image, tech }, i}
+    {#each projects as { title, description, image, tech, id }, i}
       {@const delay = 800 + i * 500}
       <div class='featured h-400 d-flex d-md-grid position-relative animate' style:--delay='{delay}ms'>
         <div class='image z-0 pointer' on:click={() => { transition(title.toLowerCase()) }}>
@@ -41,7 +44,7 @@
             {/each}
           </div>
           <div>
-            <button class='btn btn-primary border mt-10' type='button' on:click={() => { transition(title.toLowerCase()) }}>About</button>
+            <button class='btn btn-primary border mt-10' type='button' on:click={() => { transition(id) }}>About</button>
           </div>
         </div>
       </div>

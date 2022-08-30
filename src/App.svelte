@@ -9,15 +9,17 @@
 </script>
 
 <script>
-  let page = location.hash.replace('#', '') || 'home'
+  let page = location.search.replace('?', '') || 'home'
 
-  $: location.hash = page
+  $: history.replaceState(null, null, '?' + page)
+
+  let container = null
 </script>
 
 <div class='page-wrapper bg-very-dark'>
-  <Transitions bind:page />
+  <Transitions bind:page {container}/>
   <Loader />
-  <div class='content-wrapper h-full overflow-y-scroll'>
+  <div class='content-wrapper h-full overflow-y-scroll' bind:this={container}>
     <Navbar {page} />
     <Router {page} />
   </div>
