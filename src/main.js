@@ -1,7 +1,12 @@
-import App from './App.svelte';
+import App from './App.svelte'
+
+function overwrite (node) {
+  node.children[0].remove()
+  return node
+}
 
 const app = new App({
-	target: document.body
-});
+  target: overwrite(document.body)
+})
 
-export default app;
+export default app

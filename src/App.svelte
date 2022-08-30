@@ -1,28 +1,36 @@
-<script>
-import LandingCard from './modules/LandingCard.svelte'
-import Content from './modules/Content.svelte'
+<script context='module'>
+  import './global.css'
+  import 'quartermoon/css/quartermoon-variables.css'
+  import Loader from './modules/Loader.svelte'
+  import Transitions from './modules/Transitions.svelte'
+  import Router from './modules/Router.svelte'
+  import Navbar from './modules/Navbar.svelte'
+
 </script>
 
-<div class='page-wrapper'>
-  <div class='content-wrapper overflow-x-hidden'>
-    <LandingCard />
-    <div class='d-flex w-full bg-dark-light'>
-      <div class='container mt-20 pt-20'>
-        <Content />
-      </div>
-    </div>
+<script>
+  let page = location.search.replace('?', '') || 'home'
+
+  $: history.replaceState(null, null, '?' + page)
+
+  let container = null
+</script>
+
+<div class='page-wrapper bg-very-dark'>
+  <Transitions bind:page {container}/>
+  <Loader />
+  <div class='content-wrapper h-full overflow-y-scroll' bind:this={container}>
+    <Navbar {page} />
+    <Router {page} />
   </div>
 </div>
 
 <style>
+  * {
+    scroll-behavior: smooth;
+  }
   .content-wrapper {
-    perspective: 1px;
+    perspective: 400px;
     transform-style: preserve-3d;
-  }
-  :global(::-webkit-scrollbar) {
-    display: none;
-  }
-  :global(.pointer) {
-    cursor: pointer;
   }
 </style>
