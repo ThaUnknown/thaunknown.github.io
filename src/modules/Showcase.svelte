@@ -6,7 +6,7 @@
       description: 'A simple to use, anime torrent streaming app. Allows you to watch any anime, real-time with no waiting for downloads, with friends, while synching all your progress with you anime list for free with no ads or limits.',
       image: 'https://raw.githubusercontent.com/ThaUnknown/miru/HEAD/docs/show.gif',
       tech: ['Svelte', 'Electron', 'Vite', 'GraphQL', 'WASM', 'Node.js', 'BitTorrent', 'WebRTC'],
-      id: 'pwa-haven'
+      id: 'miru'
     },
     {
       title: 'PWA Haven',
