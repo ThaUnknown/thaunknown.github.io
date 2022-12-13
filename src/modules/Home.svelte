@@ -83,7 +83,7 @@
     <p>I always put <b>simplicity and performance</b> first, to ensure my apps are snappy and lightweight.</p>
     <p class='pt-20'>
       <button class='btn btn-lg btn-transparent border' type='button' on:click={() => { transition('showcase') }}>Showcase</button>
-      <button class='btn btn-primary btn-lg btn-transparent border ml-10' type='button' on:click={() => { transition('Projects') }}>Projects</button>
+      <button class='btn btn-primary btn-lg btn-transparent border ml-10' type='button' on:click={() => { transition('projects') }}>Projects</button>
     </p>
   </div>
 </section>
